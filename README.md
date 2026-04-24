@@ -1,6 +1,6 @@
-# MLflow Experiment Tracking
+# 🧪 MLflow Experiment Tracking
 
-A hands-on repository demonstrating how to use **MLflow** for experiment tracking, model logging, and prediction workflows with scikit-learn. This project covers MLflow basics as well as an end-to-end prediction pipeline with experiment management.
+A hands-on repository demonstrating how to use **MLflow** for experiment tracking, model logging, and end-to-end ML pipelines with scikit-learn. Projects span foundational concepts to real-world prediction tasks including house price and wine quality prediction.
 
 ---
 
@@ -9,41 +9,53 @@ A hands-on repository demonstrating how to use **MLflow** for experiment trackin
 ```
 ML-Flow/
 ├── basics/
-│   └── basics.ipynb              # Introduction to MLflow core concepts
-├── Prediction_With_MLFlow.ipynb  # End-to-end ML pipeline with MLflow tracking
-├── requirements.txt              # Python dependencies
+│   └── basics.ipynb                  # Introduction to MLflow core concepts
+├── House Price Prediction/           # House price regression with MLflow tracking
+├── Wine Quality Prediction/          # Wine quality classification with MLflow tracking
+├── requirements.txt                  # Python dependencies
 ├── .gitignore
 └── README.md
 ```
 
 ---
 
-## 📌 Overview
+## 📌 What This Repository Covers
 
-This repository explores key MLflow capabilities:
-
-- **Experiment Tracking** – Log parameters, metrics, and artifacts per run
-- **Model Logging** – Save and version trained scikit-learn models
+- **Experiment Tracking** – Log parameters, metrics, and artifacts across runs
+- **Model Logging & Registry** – Save, version, and reload trained scikit-learn models
 - **MLflow UI** – Visualize and compare runs via the built-in dashboard
-- **Prediction Pipeline** – Load logged models and run inference
+- **End-to-End Pipelines** – Full ML workflows from data prep to tracked inference
+- **Real-World Projects** – Applied examples on housing and wine quality datasets
 
 ---
 
-## 🧪 Notebooks
+## 🧩 Projects
 
 ### `basics/basics.ipynb`
-Covers the fundamentals of MLflow:
+A guided introduction to MLflow fundamentals:
 - Creating and managing experiments
-- Logging parameters and metrics with `mlflow.log_param()` / `mlflow.log_metric()`
-- Logging and loading models using `mlflow.sklearn.log_model()`
-- Navigating the MLflow tracking UI
+- Logging hyperparameters with `mlflow.log_param()`
+- Logging evaluation metrics with `mlflow.log_metric()`
+- Saving and loading models with `mlflow.sklearn.log_model()` / `mlflow.sklearn.load_model()`
+- Navigating the MLflow Tracking UI
 
-### `Prediction_With_MLFlow.ipynb`
-An end-to-end machine learning workflow:
-- Data preparation using **pandas** and **NumPy**
-- Model training with **scikit-learn**
-- Full MLflow run tracking (params, metrics, model artifacts)
-- Loading a logged model from the MLflow registry for prediction
+---
+
+### `House Price Prediction/`
+An end-to-end regression pipeline for predicting house prices:
+- Data preprocessing with **pandas** and **NumPy**
+- Model training with **scikit-learn** regression models
+- Full MLflow experiment tracking (parameters, metrics, artifacts)
+- Model loading and inference from the MLflow model registry
+
+---
+
+### `Wine Quality Prediction/`
+A classification pipeline for predicting wine quality scores:
+- Feature engineering and exploratory analysis
+- Model training with scikit-learn classifiers
+- MLflow run tracking with metrics comparison across experiments
+- Model versioning and prediction from the MLflow registry
 
 ---
 
@@ -61,7 +73,8 @@ cd ML-Flow
 pip install -r requirements.txt
 ```
 
-### Dependencies (`requirements.txt`)
+### Dependencies
+
 | Package | Purpose |
 |---|---|
 | `mlflow` | Experiment tracking & model registry |
@@ -78,33 +91,35 @@ pip install -r requirements.txt
    jupyter notebook
    ```
 
-2. Open and run either notebook:
-   - Start with `basics/basics.ipynb` for a guided introduction
-   - Proceed to `Prediction_With_MLFlow.ipynb` for a full pipeline walkthrough
+2. Open and run notebooks in order:
+   - `basics/basics.ipynb` — Start here for a guided MLflow introduction
+   - `House Price Prediction/` — Regression pipeline with full tracking
+   - `Wine Quality Prediction/` — Classification pipeline with run comparison
 
 ---
 
 ## 📊 Launching the MLflow UI
 
-After running any notebook, start the MLflow tracking UI to visualize logged experiments:
+After running any notebook, visualize logged experiments in the browser:
 
 ```bash
 mlflow ui
 ```
 
-Then open your browser at: [http://localhost:5000](http://localhost:5000)
+Open: [http://localhost:5000](http://localhost:5000)
 
 ---
 
-## 🛠️ Key MLflow Concepts Used
+## 🛠️ Key MLflow API Reference
 
-| Concept | Description |
+| Function | Description |
 |---|---|
 | `mlflow.start_run()` | Starts a new experiment run |
 | `mlflow.log_param()` | Logs a single hyperparameter |
 | `mlflow.log_metric()` | Logs an evaluation metric |
 | `mlflow.sklearn.log_model()` | Saves a scikit-learn model as an artifact |
 | `mlflow.sklearn.load_model()` | Loads a saved model for inference |
+| `mlflow.set_experiment()` | Sets the active experiment by name |
 
 ---
 
