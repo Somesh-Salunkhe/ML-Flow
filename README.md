@@ -52,7 +52,7 @@ An end-to-end regression pipeline for predicting house prices:
 
 ### `Wine Quality Prediction/`
 A classification pipeline for predicting wine quality scores:
-- Feature engineering and exploratory analysis
+- Feature engineering 
 - Model training with scikit-learn classifiers
 - MLflow run tracking with metrics comparison across experiments
 - Model versioning and prediction from the MLflow registry
