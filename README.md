@@ -1,6 +1,6 @@
 # 🧪 MLflow Experiment Tracking
 
-A hands-on repository demonstrating how to use **MLflow** for experiment tracking, model logging, and end-to-end ML pipelines with scikit-learn. Projects span foundational concepts to real-world prediction tasks including house price and wine quality prediction.
+A hands-on repository demonstrating the use of **MLflow** for experiment tracking, model logging, and end-to-end ML pipelines with scikit-learn. Projects span foundational concepts to real-world prediction tasks including house price and wine quality prediction.
 
 <img width="1727" height="449" alt="rmse" src="https://github.com/user-attachments/assets/fe5722a1-0350-423c-86be-d55fffb78860" />
 
