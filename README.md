@@ -1,8 +1,6 @@
 # 🧪 MLflow Experiment Tracking
 
-A hands-on repository demonstrating the use of **MLflow** for experiment tracking, model logging, and end-to-end ML pipelines with scikit-learn. Projects span foundational concepts to real-world prediction tasks including house price and wine quality prediction.
-
-<img width="1727" height="449" alt="rmse" src="https://github.com/user-attachments/assets/fe5722a1-0350-423c-86be-d55fffb78860" />
+A hands-on repository demonstrating how to use **MLflow** for experiment tracking, model logging, and end-to-end ML pipelines. Projects span foundational concepts to real-world prediction tasks including house price regression and wine quality prediction using a deep learning model.
 
 ---
 
@@ -11,10 +9,11 @@ A hands-on repository demonstrating the use of **MLflow** for experiment trackin
 ```
 ML-Flow/
 ├── basics/
-│   └── basics.ipynb                  # Introduction to MLflow core concepts
-├── House Price Prediction/           # House price regression with MLflow tracking
-├── Wine Quality Prediction/          # Wine quality classification with MLflow tracking
-├── requirements.txt                  # Python dependencies
+│   └── basics.ipynb                             # Introduction to MLflow core concepts
+├── House Price Prediction/                      # House price regression with MLflow tracking
+├── Wine Quality Prediction/
+│   └── Wine_Quality_Prediction_With_ANN.ipynb   # ANN-based wine quality prediction with MLflow
+├── requirements.txt                             # Python dependencies
 ├── .gitignore
 └── README.md
 ```
@@ -24,10 +23,10 @@ ML-Flow/
 ## 📌 What This Repository Covers
 
 - **Experiment Tracking** – Log parameters, metrics, and artifacts across runs
-- **Model Logging & Registry** – Save, version, and reload trained scikit-learn models
+- **Model Logging & Registry** – Save, version, and reload trained models
 - **MLflow UI** – Visualize and compare runs via the built-in dashboard
 - **End-to-End Pipelines** – Full ML workflows from data prep to tracked inference
-- **Real-World Projects** – Applied examples on housing and wine quality datasets
+- **Deep Learning Integration** – MLflow tracking with Keras/TensorFlow ANN models
 
 ---
 
@@ -53,11 +52,11 @@ An end-to-end regression pipeline for predicting house prices:
 ---
 
 ### `Wine Quality Prediction/`
-A classification pipeline for predicting wine quality scores:
-- Feature engineering 
-- Model training with scikit-learn classifiers
-- MLflow run tracking with metrics comparison across experiments
-- Model versioning and prediction from the MLflow registry
+A deep learning pipeline for predicting wine quality scores using an **Artificial Neural Network (ANN)**:
+- Data preprocessing and feature scaling
+- ANN model built with **Keras (TensorFlow backend)**
+- MLflow run tracking for epochs, loss, and evaluation metrics
+- Model versioning and reloading via the MLflow registry
 
 ---
 
@@ -80,7 +79,8 @@ pip install -r requirements.txt
 | Package | Purpose |
 |---|---|
 | `mlflow` | Experiment tracking & model registry |
-| `scikit-learn` | ML model training |
+| `scikit-learn` | ML model training (house price) |
+| `tensorflow` / `keras` | ANN model for wine quality prediction |
 | `pandas` | Data manipulation |
 | `numpy` | Numerical computing |
 
@@ -96,7 +96,7 @@ pip install -r requirements.txt
 2. Open and run notebooks in order:
    - `basics/basics.ipynb` — Start here for a guided MLflow introduction
    - `House Price Prediction/` — Regression pipeline with full tracking
-   - `Wine Quality Prediction/` — Classification pipeline with run comparison
+   - `Wine Quality Prediction/Wine_Quality_Prediction_With_ANN.ipynb` — ANN pipeline with Keras and MLflow
 
 ---
 
@@ -121,6 +121,7 @@ Open: [http://localhost:5000](http://localhost:5000)
 | `mlflow.log_metric()` | Logs an evaluation metric |
 | `mlflow.sklearn.log_model()` | Saves a scikit-learn model as an artifact |
 | `mlflow.sklearn.load_model()` | Loads a saved model for inference |
+| `mlflow.tensorflow.log_model()` | Saves a Keras/TensorFlow model as an artifact |
 | `mlflow.set_experiment()` | Sets the active experiment by name |
 
 ---
