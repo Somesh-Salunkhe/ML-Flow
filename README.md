@@ -25,7 +25,7 @@ ML-Flow/
 - **Experiment Tracking** – Log parameters, metrics, and artifacts across runs
 - **Model Logging & Registry** – Save, version, and reload trained models
 - **MLflow UI** – Visualize and compare runs via the built-in dashboard
-- **End-to-End Pipelines** – Full ML workflows from data prep to tracked inference
+- **End-to-End Pipelines** – Full ML workflows from data preparation to tracked inference
 - **Deep Learning Integration** – MLflow tracking with Keras/TensorFlow ANN models
 
 ---
@@ -53,7 +53,7 @@ An end-to-end regression pipeline for predicting house prices:
 
 ### `Wine Quality Prediction/`
 A deep learning pipeline for predicting wine quality scores using an **Artificial Neural Network (ANN)**:
-- Data preprocessing and feature scaling
+- Data preprocessing 
 - ANN model built with **Keras (TensorFlow backend)**
 - MLflow run tracking for epochs, loss, and evaluation metrics
 - Model versioning and reloading via the MLflow registry
